@@ -263,7 +263,7 @@ LIMIT 6;
 
 We are using a CTE to embed the user query, and then performing nearest neighbors search using the cosine similarity function to compare the distance between our embeddings. Note how fast this is! We are embedding the query in the database and utilizing an HNSW index from pgvector to perform ridiculously fast retrieval.
 
-There is a slight problem with the results of our retrieval. If you were to ask me: `How do I write a select statement with pgml.transform?` I couldn't use any of the top 3 results from our search to answer that queestion. Our search results aren't bad, but they can be better. This is why we rerank.
+There is a slight problem with the results of our retrieval. If you were to ask me: `How do I write a select statement with pgml.transform?` I couldn't use any of the top 3 results from our search to answer that question. Our search results aren't bad, but they can be better. This is why we rerank.
 
 ### Unified Retrieval + Reranking
 
